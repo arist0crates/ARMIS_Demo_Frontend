@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Fornecedor</th>
+    <th>Data Fatura</th>
+    <th>Data Vencimento</th>
+    <th>Valor</th>
+  </tr>
+  <tr *ngFor="let fatura of faturas">
+    <td>{{fatura.fornecedor}}</td>
+    <td>{{fatura.dataFatura}}</td>
+    <td>{{fatura.dataVencimento}}</td>
+    <td>{{fatura.valor}}</td>
+  </tr>
+</table>
