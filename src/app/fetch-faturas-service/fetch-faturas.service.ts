@@ -11,11 +11,15 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class FetchFaturasPendentesService {
+export class FetchFaturasService {
 
   constructor(private http: HttpClient) { }
 
   fetchFaturasPendentesByInsertuser(insertUser:string) : Observable<Fatura[]> {
-    return this.http.get<Fatura[]>(Config.fetchFaturasPendentesURL(insertUser), httpOptions);
+    return this.http.get<Fatura[]>(Config.fetchFaturasPendentesByInsertUserURL(insertUser), httpOptions);
+  }
+
+  fetchFaturasByInsertuser(insertUser:string) : Observable<Fatura[]> {
+    return this.http.get<Fatura[]>(Config.fetchFaturasByInsertUserURL(insertUser), httpOptions);
   }
 }

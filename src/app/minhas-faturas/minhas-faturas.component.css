@@ -4,21 +4,21 @@ table, #title, th, td {
     border: 1px solid black;
 }
 
-#FaturasPendentes{
+#MinhasFaturas{
     width: 934px;
     height: 40px;
 }
 
-#FaturasPendentes tr:nth-child(odd){
+#MinhasFaturas tr:nth-child(odd){
     background-color: rgb(202, 210, 216);
     height: 30px;
 }
-#FaturasPendentes tr:nth-child(even){
+#MinhasFaturas tr:nth-child(even){
     background-color: #ffffff;
     height: 30px;
 }
 
-#FaturasPendentesTitle{
+#MinhasFaturasTitle{
     text-align: left;
     font-family: Roboto;
     font-size: 16px;
@@ -28,7 +28,7 @@ table, #title, th, td {
     color: white;
 }
 
-#FaturasPendentes th {
+#MinhasFaturas th {
     padding-top: 12px;
     padding-bottom: 12px;
     
@@ -41,7 +41,7 @@ table, #title, th, td {
     color: black;
 }
 
-#FaturasPendentes td {
+#MinhasFaturas td {
     text-align: center;
     font-family: Roboto;
     font-size: 12px;

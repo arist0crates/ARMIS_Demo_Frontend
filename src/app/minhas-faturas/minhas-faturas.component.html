@@ -1,15 +1,17 @@
-<table id="FaturasPendentes">
-  <caption id="FaturasPendentesTitle">Faturas Pendentes</caption>
+<table id="MinhasFaturas">
+  <caption id="MinhasFaturasTitle">Minhas Faturas</caption>
   <tr>
     <th>Fornecedor</th>
     <th>Data Fatura</th>
     <th>Data Vencimento</th>
     <th>Valor</th>
+    <th>Estado</th>
   </tr>
   <tr *ngFor="let fatura of faturas">
     <td>{{fatura.fornecedor}}</td>
     <td>{{fatura.dataFatura}}</td>
     <td>{{fatura.dataVencimento}}</td>
     <td>{{fatura.valor}}</td>
+    <td>{{fatura.estado}}</td>
   </tr>
 </table>

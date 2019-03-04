@@ -3,11 +3,11 @@ import { Fatura } from '../model/fatura';
 import { FetchFaturasService } from '../fetch-faturas-service/fetch-faturas.service';
 
 @Component({
-  selector: 'app-faturas-pendentes',
-  templateUrl: './faturas-pendentes.component.html',
-  styleUrls: ['./faturas-pendentes.component.css']
+  selector: 'app-minhas-faturas',
+  templateUrl: './minhas-faturas.component.html',
+  styleUrls: ['./minhas-faturas.component.css']
 })
-export class FaturasPendentesComponent implements OnInit {
+export class MinhasFaturasComponent implements OnInit {
 
   faturas : Fatura[] = [];
 
@@ -18,7 +18,7 @@ export class FaturasPendentesComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.fetchFaturasService.fetchFaturasPendentesByInsertuser("manuel.meireles")
+    this.fetchFaturasService.fetchFaturasByInsertuser("manuel.meireles")
     .subscribe(faturas => this.faturas = faturas);
   }
 }
