@@ -7,13 +7,15 @@ import { FaturasPendentesComponent } from './faturas-pendentes/faturas-pendentes
 import { HttpClientModule } from '@angular/common/http';
 import { MinhasFaturasComponent } from './minhas-faturas/minhas-faturas.component';
 import { EngServicosComponent } from './eng-servicos/eng-servicos.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FaturasPendentesComponent,
     MinhasFaturasComponent,
-    EngServicosComponent
+    EngServicosComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

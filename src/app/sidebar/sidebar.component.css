@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+#Options {
+    width: 270px;
+}
+
+li {
+    height: 70px;
+    color: #ffffff;
+    text-align: left;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+#UserPanel {
+    height: 118px;
+    opacity: 50%;
+    background-color: #18191F;
+}
+
+#UserPhoto {
+    width: 56px;
+    height: 56px;
+}
