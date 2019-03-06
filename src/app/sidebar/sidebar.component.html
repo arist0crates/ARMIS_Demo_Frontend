@@ -1,10 +1,26 @@
-
-<ul id="Options">
-    <li id="UserPanel">
-        <img id="UserPhoto" href="assets/images/ricardo.lourenco.jpg">
-    </li>
-    <li>Outdoor Solutions</li>
-    <li>Eng.ª e Serviços</li>
-    <li>Outdoor Solutions</li>
-    <li>Eng.ª e Serviços</li>
-</ul>
+<div id="Sidebar">
+    <ng-template [ngIf]="isAuthenticated()">
+        <div id="UserPanel">
+            <!-- <div id="UserName">{{getCurrentUser()?.nome}}</div> -->
+            <!-- <div id="UserRole">{{currentUser.papel}}</div> -->
+            <img id="UserPhoto" src="assets/images/ricardo.lourenco.jpg">
+        </div>
+    </ng-template>
+    <!-- <div id="Options"> -->
+    <div class="options">
+        <img class="arrow" src="assets/images/seta_menu.png">
+        Outdoor Solutions
+    </div>
+    <div class="options">
+        <img class="arrow" src="assets/images/seta_menu.png">
+        Eng.ª e Serviços
+    </div>
+    <div class="options">
+        <img class="arrow" src="assets/images/seta_menu.png">
+        Dinamic
+    </div>
+    <div class="options">
+        <img class="arrow" src="assets/images/seta_menu.png">
+        InPlub
+    </div>
+</div>

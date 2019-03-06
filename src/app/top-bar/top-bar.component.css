@@ -1,0 +1,36 @@
+#Topbar{
+    width: 1010;
+    height: 76px;
+    background-color: #fafafa;
+}
+
+#CompanyLogo {
+    width: 270px;
+    height: 76px;
+    /* left:0; */
+    text-align: center;
+    background-color: #282a33;
+}
+
+.topbarElem {
+    float: right;
+}
+
+#Notifications {
+    width: 76px;
+}
+
+#Search {
+    width: 320px;
+}
+
+#EmailIcon {
+    float: right;
+}
+
+#SearchIcon {
+    float: right;
+}
+
+
+

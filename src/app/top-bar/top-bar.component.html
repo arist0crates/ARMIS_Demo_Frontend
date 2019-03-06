@@ -1,0 +1,22 @@
+<nav id="Topbar" class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="nav navbar-nav navbar-left">
+      <div id="CompanyLogo">
+        <img src="assets/images/logo.png">
+      </div>
+    </div>
+    <div class="nav navbar-nav navbar-right">
+      <div id="Notifications" class="topbarElem">
+        <img id="EmailIcon" src="assets/images/email.png">
+      </div>
+      <div id="Search" class="topbarElem">
+        <img id="SearchIcon" src="assets/images/search.png">
+      </div>
+      <ng-template [ngIf]="!isAuthenticated()">
+          <a id="login" class="topbarElem" routerLink="/signin" routerLinkActive="active">Login</a>
+          <a id="login" class="topbarElem" routerLink="/signup" routerLinkActive="active">Sign Up</a>
+      </ng-template>
+      <a id="logout" class="topbarElem" (click)="onLogout()" *ngIf="isAuthenticated()">Logout</a>
+    </div>
+  </div>
+</nav>

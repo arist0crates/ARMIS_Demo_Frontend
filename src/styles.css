@@ -1,2 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+a {
+    cursor: pointer;
+    cursor: hand;
+}
+
+a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #fafafa;
+    border-radius: 4px;
+    color: #282a33;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+a:visited, a:link {
+    color: #282a33;
+}
+
+a:hover {
+    color: #039be5;
+}
+
+a.active {
+    color: #039be5;
+}

@@ -1,16 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-#Options {
+#Sidebar {
     width: 270px;
+    /* height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0; */
 }
 
-li {
+.options {
     height: 70px;
     color: #ffffff;
+    background-color: #2ba386;
     text-align: left;
+    padding-top: 20px;
+    padding-left: 28px;
+
     font-family: Roboto;
     font-size: 16px;
     font-weight: lighter;
+}
+
+.arrow {
+    text-align: right;
+    padding-right: 28px;
+}
+
+li:hover {
+    background-color: #117c68;
 }
 
 #UserPanel {
@@ -22,4 +39,6 @@ li {
 #UserPhoto {
     width: 56px;
     height: 56px;
+    padding-top: 28px;
+    padding-left: 28px;
 }
