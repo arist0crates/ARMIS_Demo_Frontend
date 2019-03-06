@@ -4,13 +4,19 @@ import { Injectable, SystemJsNgModuleLoader } from '@angular/core';
 import { User } from './user';
 import { forEach } from '@angular/router/src/utils/collection';
 import { stringify } from '@angular/core/src/util';
+import { Observable } from 'rxjs';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 @Injectable()
 export class AuthService {
   token: string;
   public currentuserrole : string;
+  db : AngularFireDatabase;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, db: AngularFireDatabase) { 
+    this.db = db;
+  }
+
   uid: string;
   signupUser(email: string, password: string, nome: string) {
     firebase.auth().createUserWithEmailAndPassword(email, password).then((returnedUser) => {
@@ -103,22 +109,23 @@ export class AuthService {
       email: email,
       papel: "administrador"
     });
-
-    firebase.database().ref('users/' + userId + '/roles').set({
-      customer: customer,
-      contentManager: contentManager,
-      orderManager: orderManager,
-      clericalWorker: clericalWorker
-    })
   }
-  getCurrentUser(): User {
+  getCurrentUser(): Observable<any> {
     //Get the current userID
     var userId = firebase.auth().currentUser.uid;
-    //Get the user data
-    firebase.database().ref('/users/' + userId).once('value').then(function (snapshot) {
-      return new User(snapshot.val().email, snapshot.val().roles, snapshot.val().nome);
-    });
-    return null;
+    // //Get the user data
+    // firebase.database().ref('/users/' + userId).once('value').then(function (snapshot) {
+    //   return new User(snapshot.val().email, snapshot.val().papel, snapshot.val().nome);
+    // });
+    // return null;
+
+    return this.db.object('/users/' + userId).valueChanges();
+  }
+
+  getSimpleUser(): User {
+    let userEmail = firebase.auth().currentUser.email;
+    let userName = User.parseName(userEmail);
+    return new User(userEmail, "Administrador", userName);
   }
   
   log(uid, whatUsed: string, d: string) {

@@ -7,11 +7,12 @@
     <th>Valor</th>
     <th>Estado</th>
   </tr>
-  <tr *ngFor="let fatura of faturas">
+  <tr *ngFor="let fatura of faturas | paginate: { itemsPerPage: 10, currentPage: minhasFaturasPageNumber }">
     <td>{{fatura.fornecedor}}</td>
     <td>{{fatura.dataFatura}}</td>
     <td>{{fatura.dataVencimento}}</td>
     <td>{{fatura.valor}}</td>
     <td>{{fatura.estado}}</td>
   </tr>
+  <pagination-controls (pageChange)="minhasFaturasPageNumber = $event"></pagination-controls>
 </table>

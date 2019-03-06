@@ -1,25 +1,30 @@
 <div id="Sidebar">
     <ng-template [ngIf]="isAuthenticated()">
         <div id="UserPanel">
-            <!-- <div id="UserName">{{getCurrentUser()?.nome}}</div> -->
+            <img class="userinfo" id="UserPhoto" src="assets/images/ricardo.lourenco.jpg">
+            <div class="userinfo" >
+                <div id="UserName">{{currentUser.nome}}</div>
+                <div id="UserRole">{{currentUser.papel}}</div>
+            </div>
+            <!-- <div class="userinfo" id="UserName">{{userEmail}}</div> -->
+            <!-- <div id="UserName">{{ (currentUser | async)?.nome}} Administrador</div> -->
             <!-- <div id="UserRole">{{currentUser.papel}}</div> -->
-            <img id="UserPhoto" src="assets/images/ricardo.lourenco.jpg">
         </div>
     </ng-template>
     <!-- <div id="Options"> -->
-    <div class="options">
+    <div class="options" routerLink="/" routerLinkActive="active" >
         <img class="arrow" src="assets/images/seta_menu.png">
         Outdoor Solutions
     </div>
-    <div class="options">
+    <div class="options" routerLink="/engenharia" routerLinkActive="active" *ngIf="isAuthenticated()">
         <img class="arrow" src="assets/images/seta_menu.png">
         Eng.ª e Serviços
     </div>
-    <div class="options">
+    <div class="options" routerLink="/" routerLinkActive="active" >
         <img class="arrow" src="assets/images/seta_menu.png">
         Dinamic
     </div>
-    <div class="options">
+    <div class="options" routerLink="/" routerLinkActive="active" >
         <img class="arrow" src="assets/images/seta_menu.png">
         InPlub
     </div>

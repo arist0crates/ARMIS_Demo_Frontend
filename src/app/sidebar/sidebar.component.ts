@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
 import { User } from '../auth/user';
 import { AuthService } from '../auth/auth.service';
+import { Observable } from 'rxjs';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,9 +13,13 @@ import { AuthService } from '../auth/auth.service';
 export class SidebarComponent implements OnInit {
 
   currentUser : User;
+  userEmail : string = "";
+  userName : string = "";
+  db : AngularFireDatabase;
 
-  constructor(private authService: AuthService) {
-    this.currentUser = new User("Dummy Email", null, "Dummy Name");
+  constructor(private authService: AuthService, db: AngularFireDatabase) {
+    this.db = db;
+    this.currentUser = new User("", "", "");
   }
 
   ngOnInit() {
@@ -20,15 +27,17 @@ export class SidebarComponent implements OnInit {
 
   isAuthenticated() {
     let result = this.authService.isAuthenticated();
-    // if (result == true){
-    //   this.currentUser = this.getCurrentUser();
-    //   console.log(this.currentUser.nome);
-    //   console.log(this.currentUser.papel);
-    // }
+    if (result == true && this.userEmail == ""){
+      // var userId = firebase.auth().currentUser.uid;
+      // this.currentUser = this.db.object('/users/' + userId).valueChanges();
+      // this.userEmail = firebase.auth().currentUser.email;
+      // this.userName = User.parseName(this.userEmail);
+      this.currentUser = this.getCurrentUser();
+    }
     return result;
   }
 
   getCurrentUser(){
-    return this.authService.getCurrentUser();
+    return this.authService.getSimpleUser();
   }
 }

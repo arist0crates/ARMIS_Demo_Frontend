@@ -21,6 +21,19 @@
     font-weight: lighter;
 }
 
+.options {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.options:hover {
+    color: #117C68;
+}
+
+.options.active {
+    color: #117C68;
+}
+
 .arrow {
     text-align: right;
     padding-right: 28px;
@@ -34,6 +47,25 @@ li:hover {
     height: 118px;
     opacity: 50%;
     background-color: #18191F;
+}
+
+.userinfo {
+    display: inline-block;
+}
+
+#UserName {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+#UserRole {
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: bold;
+    color: #ffffff;
 }
 
 #UserPhoto {

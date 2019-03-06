@@ -14,6 +14,15 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from './auth/auth.service';
 import { SignupComponent } from './signup/signup.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+import { AngularFireDatabase } from '@angular/fire/database';
+
+import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,10 +38,16 @@ import { SignupComponent } from './signup/signup.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
+    AngularFireStorageModule, // imports firebase/storage only needed for storage features
+    NgxPaginationModule//add here
   ],
   providers: [
-    AuthService
+    AuthService,
+    AngularFireDatabase
   ],
   bootstrap: [AppComponent]
 })

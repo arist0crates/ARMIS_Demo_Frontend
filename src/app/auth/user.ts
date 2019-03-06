@@ -8,11 +8,21 @@ export interface Roles {
 export class User {
     email: string;
     nome:string
-    roles: Roles;
     papel: string;
-    constructor(email, roles : Roles, nome) {
-        this.email = email; this.roles = roles; this.nome=nome;
-        this.papel = "Administrador";
+    constructor(email: string, papel: string, nome: string) {
+        this.email = email; this.nome=nome;
+        this.papel = papel;
+    }
+
+    public static parseName(email: string) : string{
+        let name = email.split('@')[0];
+        return this.toTitleCase(name);
+    }
+
+    private static toTitleCase(str) {
+        return str.replace(/\w\S*/g, function(txt){
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        });
     }
 }
 
