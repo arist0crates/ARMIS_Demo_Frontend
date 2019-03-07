@@ -1,3 +1,25 @@
+# ARMIS-Demo, by Rod, Rodd & Rodri, inc.
+
+## System Overview
+
+### Component View
+![System Overview](docs/SystemOverviewComponents.png)
+
+### Deployment View
+![System Overview](docs/SystemOverviewDeployment.png)
+
+## ARMIS Demo Frontend Overview
+
+### Component View
+![Component Overview](docs/ArmisDemoFrontendAngularComponentsOverview.png)
+
+## ARMIS Demo Backend Overview
+
+### Component View
+![Component Overview](docs/ArmisDemoBackendOverview.png)
+
+
+
 # ArmisDemoFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
