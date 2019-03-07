@@ -19,11 +19,9 @@
 ![Component Overview](docs/ArmisDemoBackendOverview.png)
 
 ### Tests
-
-Route test examples
 ![Route Tests Example](docs/ArmisDemoBackendRouteTestsExample.png)
 
-Repo test examples
+
 ![Repo Tests Example](docs/ArmisDemoBackendRepoTestsExample.png)
 
 
