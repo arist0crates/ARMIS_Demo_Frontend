@@ -26,6 +26,11 @@ Route test examples
 Repo test examples
 ![Repo Tests Example](docs/ArmisDemoBackendRepoTestsExample.png)
 
+
+## Firebase Console
+
+![Component Overview](docs/FirebaseManagementConsole.png)
+
 # ArmisDemoFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
