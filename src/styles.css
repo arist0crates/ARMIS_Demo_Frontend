@@ -6,7 +6,7 @@ a {
     cursor: hand;
 }
 
-a {
+a, button, label {
     padding: 5px 10px;
     text-decoration: none;
     margin-right: 10px;
