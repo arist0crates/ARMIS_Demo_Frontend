@@ -19,10 +19,10 @@
 ![Component Overview](docs/ArmisDemoBackendOverview.png)
 
 ### Tests
-![Route Tests Example](docs/ArmisDemoBackendRouteTestsExample.png)
+![Route Tests Example](https://github.com/arist0crates/ARMIS_Demo_Frontend/blob/master/ArmisDemoBackendRouteTestsExample.PNG)
 
 
-![Repo Tests Example](docs/ArmisDemoBackendRepoTestsExample.png)
+![Repo Tests Example](https://github.com/arist0crates/ARMIS_Demo_Frontend/blob/master/ArmisDemoBackendRepoTestsExample.PNG)
 
 
 ## Firebase Console
