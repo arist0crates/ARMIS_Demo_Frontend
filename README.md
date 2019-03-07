@@ -19,9 +19,11 @@
 ![Component Overview](docs/ArmisDemoBackendOverview.png)
 
 ### Tests
+
+Test example for Fatura Routes
 ![Route Tests Example](https://github.com/arist0crates/ARMIS_Demo_Frontend/blob/master/ArmisDemoBackendRouteTestsExample.PNG)
 
-
+Test example for Fatura Repo
 ![Repo Tests Example](https://github.com/arist0crates/ARMIS_Demo_Frontend/blob/master/ArmisDemoBackendRepoTestsExample.PNG)
 
 
